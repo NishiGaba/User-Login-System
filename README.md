@@ -1,7 +1,5 @@
-# User Login and Registration System created in Node JS
+# User Login and Registration System
 
-
-# Project Description and Features
 
 * MongoDB NoSQL Database
 * Mongoose ORM
