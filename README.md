@@ -1,6 +1,8 @@
 # User Login and Registration System
 
 
+## Project Description and Features
+
 * MongoDB NoSQL Database
 * Mongoose ORM
 * Passport User Authentication
@@ -25,18 +27,27 @@
 
 MongoDB is NoSQL Database and it stores information in JSON format. It is the commonly used DB for Node JS.
 MongoDb makes development fast and it is syntactically simple. It is easy to change and maintain.
+
 You  can Install MongoDB from here: [Install_MongoDB](https://docs.mongodb.com/manual/installation/)
 
 You can check, if mongoDb is already installed in your system by typing this command in your terminal: 
 
 You can find the path of mongoDB installed in your system through: ```$ which mongod``` 
+
 You can start the mongoDB through: ```$ mongo```
+
 You can see the list of databases through: ```> show dbs```
+
 Create new Database by typing: ```> use nodeauth``` (where nodeauth here is the name of Database)
+
 Create new Collection for ```nodeauth``` DB: ```db.createCollection('users');```
+
 You can see the list of collections through: ```> show collections```
+
 You can INSERT into DB through: ```db.users.insert({name: "NishiGaba"})```
+
 To find all the Records of the Collection: ```db.users.find();``` or ```db.users.find().pretty();```
+
 To update the Record: ```db.users.update({name: "NishiGaba"},{ $set: {email: "gabanishi45@gmail.com"}});```
 
 If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs.mongodb.com/?_ga=2.25510269.1120633829.1507739544-13259898.1499097785)
@@ -46,7 +57,7 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 coming soon....
 
 
-## Refrence 
+## Refrences
 
 * [udemy](https://www.udemy.com/)
 * [treehouse](https://teamtreehouse.com/home)
