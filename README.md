@@ -94,6 +94,8 @@ If you want a detailed knowledge about these node modules, visit this link [npmJ
 
 ## Section 2 (Application and Middleware Setup)
 
+* Require all the installed modules in your app.js
+
 coming soon....
 
 
