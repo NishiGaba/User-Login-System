@@ -56,7 +56,6 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 
 * body-parser : ```npm install body-parser --save``` 
 
-
 * cookie-parser : ```npm install cookie-parser --save```
 
 * debug : ```npm install debug --save```
@@ -72,6 +71,24 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 * mongodb : ```npm install mongodb --save```
 
 * mongoose : ```npm install mongoose --save```
+
+* connect-flash : ```npm install connect-flash --save```
+
+* express-validator : ```npm install express-validator --save``` 
+
+* express-session : ```npm install express-session --save``` 
+
+* express-messages : ```npm install express-messages --save``` 
+
+* passport : ```npm install passport --save```
+
+* passport-local : ```npm install passport-local --save```
+
+* passport-http : ```npm install passport-http --save```
+
+* passport-local : ```npm install passport-local --save```
+
+* multer : ```npm install multer --save```
 
 If you want a detailed knowledge about these node modules, visit this link [npmJS](https://www.npmjs.com)
 
