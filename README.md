@@ -73,6 +73,8 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 
 * mongoose : ```npm install mongoose --save```
 
+If you want a detailed knowledge about these node modules, visit this link [npmJS](https://www.npmjs.com)
+
 ## Section 2 (Application and Middleware Setup)
 
 coming soon....
