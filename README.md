@@ -54,49 +54,20 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 
 ### Node Modules to Install Before going to Section 2
 
-* body-parser : ```npm install body-parser --save``` 
+Install all the modules mentioned in package.json file by running this command: 
 
-* cookie-parser : ```npm install cookie-parser --save```
-
-* debug : ```npm install debug --save```
-
-* express : ```npm install express --save```
-
-* jade : ```npm install jade --save```
-
-* morgan : ```npm install morgan --save```
-
-* serve-favicon : ```npm install serve-favicon --save```
-
-* mongodb : ```npm install mongodb --save```
-
-* mongoose : ```npm install mongoose --save```
-
-* connect-flash : ```npm install connect-flash --save```
-
-* express-validator : ```npm install express-validator --save``` 
-
-* express-session : ```npm install express-session --save``` 
-
-* express-messages : ```npm install express-messages --save``` 
-
-* passport : ```npm install passport --save```
-
-* passport-local : ```npm install passport-local --save```
-
-* passport-http : ```npm install passport-http --save```
-
-* passport-local : ```npm install passport-local --save```
-
-* multer : ```npm install multer --save```
+	```npm install <--package-name--> --save```
 
 If you want a detailed knowledge about these node modules, visit this link [npmJS](https://www.npmjs.com)
 
+
 ## Section 2 (Application and Middleware Setup)
 
-* Require all the installed modules in your app.js
+In this section, we are going to setup our application and middleware system by following these steps:
 
-coming soon....
+* Require all the installed modules in your app.js file
+
+* Setup your Server by following through this guide: [getting_started_guide](https://nodejs.org/en/docs/guides/getting-started-guide/)
 
 
 ## Refrences
