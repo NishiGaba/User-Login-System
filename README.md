@@ -56,7 +56,7 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 
 Install all the modules mentioned in package.json file by running this command: 
 
-	```npm install <--package-name--> --save```
+	```npm install <package-name> --save```
 
 If you want a detailed knowledge about these node modules, visit this link [npmJS](https://www.npmjs.com)
 
@@ -67,7 +67,7 @@ In this section, we are going to setup our application and middleware system by 
 
 * Require all the installed modules in your app.js file
 
-* Setup your Server by following through this guide: [getting_started_guide](https://nodejs.org/en/docs/guides/getting-started-guide/)
+* Setup your Server by following through this guide: [Getting_Started_Guide](https://nodejs.org/en/docs/guides/getting-started-guide/)
 
 
 ## Refrences
