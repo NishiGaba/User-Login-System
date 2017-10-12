@@ -52,6 +52,27 @@ To update the Record: ```db.users.update({name: "NishiGaba"},{ $set: {email: "ga
 
 If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs.mongodb.com/?_ga=2.25510269.1120633829.1507739544-13259898.1499097785)
 
+### Node Modules to Install Before going to Section 2
+
+* body-parser : ```npm install body-parser --save``` 
+
+
+* cookie-parser : ```npm install cookie-parser --save```
+
+* debug : ```npm install debug --save```
+
+* express : ```npm install express --save```
+
+* jade : ```npm install jade --save```
+
+* morgan : ```npm install morgan --save```
+
+* serve-favicon : ```npm install serve-favicon --save```
+
+* mongodb : ```npm install mongodb --save```
+
+* mongoose : ```npm install mongoose --save```
+
 ## Section 2 (Application and Middleware Setup)
 
 coming soon....
@@ -61,6 +82,7 @@ coming soon....
 
 * [udemy](https://www.udemy.com/)
 * [treehouse](https://teamtreehouse.com/home)
+* [npmJS](https://www.npmjs.com)
 
 
 ## License
