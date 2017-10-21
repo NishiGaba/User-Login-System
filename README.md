@@ -67,8 +67,7 @@ In this section, we are going to setup our application and middleware system by 
 
 * Require all the installed modules in your ``` app.js ``` file
 
-* Setup your Server by following through this guide: [Getting_Started_Guide](https://nodejs.org/en/docs/guides/getting-started-guide/)
-
+* Use all the required modules in your ``` app.js ``` file
 
 ## Section 3 (Views and Layouts)
 
