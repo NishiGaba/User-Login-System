@@ -48,7 +48,7 @@ You can INSERT into DB through: ```db.users.insert({name: "NishiGaba"})```
 
 To find all the Records of the Collection: ```db.users.find();``` or ```db.users.find().pretty();```
 
-To update the Record: ```db.users.update({name: "NishiGaba"},{ $set: {email: "gabanishi45@gmail.com"}});```
+To update the Record: ``` db.users.update({name: "NishiGaba"},{ $set: {email: "gabanishi45@gmail.com"}}); ```
 
 If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs.mongodb.com/?_ga=2.25510269.1120633829.1507739544-13259898.1499097785)
 
@@ -56,7 +56,7 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 
 Install all the modules mentioned in package.json file by running this command: 
 
-	```npm install <package-name> --save```
+	``` npm install <package-name> --save ```
 
 If you want a detailed knowledge about these node modules, visit this link [npmJS](https://www.npmjs.com)
 
@@ -65,9 +65,14 @@ If you want a detailed knowledge about these node modules, visit this link [npmJ
 
 In this section, we are going to setup our application and middleware system by following these steps:
 
-* Require all the installed modules in your app.js file
+* Require all the installed modules in your ``` app.js ``` file
 
 * Setup your Server by following through this guide: [Getting_Started_Guide](https://nodejs.org/en/docs/guides/getting-started-guide/)
+
+
+## Section 3 (Views and Layouts)
+
+Coming Soon...
 
 
 ## Refrences
