@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	.container
+		form(method='post', action='/users/login', enctype='multipart/form-data')
+			h1	Login
+			p 	Please Login using the form below
+			label(for='username') Username:
+			input#username.form-control(type='text', placeholder='Enter Username' name='username')
+			div.form-group
+			label(for='password') Password:
+			input#password.form-control(type='password', placeholder='Enter Password' name='password')
+			br
+			button.btn.btn-primary(type='submit') Login
+							

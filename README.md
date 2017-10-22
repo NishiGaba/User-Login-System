@@ -79,7 +79,7 @@ If you want to dig deep in Jade Templating and Express Multiple Views Setup, the
 
 [Express Website Building and Jade Template Setup](https://github.com/NishiGaba/Basic-Express-Website)
 
-We are going to add some new views and routes for **Register** and **Login** and then require them in our ``` app.js ``` file 
+We are going to add some new Jade Templates for **Register** and **Login** Pages.
 
 
 ## Section 4 (User Registration)
