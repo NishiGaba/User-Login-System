@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Basic Express Website
+    title NodeAuth
 
     meta(charset='utf-8')    
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -24,13 +24,16 @@ html
           a.navbar-brand(href='#') Express
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li(class=(title === 'Home' ? 'active' : ''))
-              a(href='/') Home
-            li(class=(title === 'About' ? 'active' : ''))
-              a(href='/about') About
-            li(class=(title === 'Contact' ? 'active' : ''))
-              a(href='/contact') Contact
-        
+            li(class=(title === 'Members' ? 'active' : ''))
+              a(href='/') Members
+            li(class=(title === 'Register' ? 'active' : ''))
+              a(href='/users/register') Register
+            li(class=(title === 'Login' ? 'active' : ''))
+              a(href='/users/login') Login
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/users/logout') Logout
+
     block content
     footer
       p &copy; 2015, All Rights Reserved

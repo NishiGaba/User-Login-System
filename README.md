@@ -56,7 +56,7 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 
 Install all the modules mentioned in package.json file by running this command: 
 
-	``` npm install <package-name> --save ```
+	``` npm install (package-name) --save ```
 
 If you want a detailed knowledge about these node modules, visit this link [npmJS](https://www.npmjs.com)
 
@@ -69,10 +69,22 @@ In this section, we are going to setup our application and middleware system by 
 
 * Use all the required modules in your ``` app.js ``` file
 
+
 ## Section 3 (Views and Layouts)
 
-Coming Soon...
+In this Section, we are going to Setup Bootstrap Theme and updating the views by changing the content in layout.jade,
+index.jade in the ``` views``` Directory.
 
+If you want to dig deep in Jade Templating and Express Multiple Views Setup, then just go through with this project:
+
+[Express Website Building and Jade Template Setup](https://github.com/NishiGaba/Basic-Express-Website)
+
+We are going to add some new views and routes for **Register** and **Login** and then require them in our ``` app.js ``` file 
+
+
+## Section 4 (User Registration)
+
+Coming Soon...
 
 ## Refrences
 
