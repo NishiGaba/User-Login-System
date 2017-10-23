@@ -56,7 +56,7 @@ If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs
 
 Install all the modules mentioned in package.json file by running this command: 
 
-	``` npm install (package-name) --save ```
+	 npm install (package-name) --save 
 
 If you want a detailed knowledge about these node modules, visit this link [npmJS](https://www.npmjs.com)
 
@@ -87,9 +87,11 @@ We are going to add some new Jade Templates for **Register** and **Login** Pages
 In this section, we are going to register new users using mongoose models and saving their data in mongodb and 
 validating the registration form data using express-validator. Modules used in this section are briefly described as:
 
-* multer - file uploading
-* flash = message
-* expressValidator
+* ``` express-validator ``` : An express.js middleware for validations.
+* ``` multer ``` : Multer is a node.js middleware for handling multipart/form-data, which is primarily used for 					   uploading files.
+* ``` flash ``` : The simplest flash implementation for Express for showing messages.
+
+If you want detailed knowledge about these modules, just go through this link: [npmJS](https://www.npmjs.com)
 
 
 ## Section 5 (Password Encryption with Bcrypt) 
