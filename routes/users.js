@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var User = require('../models/user');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
  res.send('Respond with a resource');
@@ -20,6 +22,8 @@ router.get('/login', function(req, res, next) {
 
 router.post('/register',function(req,res,next) {
 
+	console.log('###', req.body);
+
 	//Get Form Values
 	var name 			=	 req.body.name;
 	var email 			=	 req.body.email;
@@ -29,30 +33,25 @@ router.post('/register',function(req,res,next) {
 
 
 	//Check for IMage Field
-	if(req.files) {
-		if(req.files.profile) {
+	if(req.files && req.files.profile) {
 
-			console.log('uploading');
+		console.log('uploading');
 
-			var profileImageOriginalName  = 	req.files.profile.originalname;
-			var profileImageName 		  =		req.files.profile.name;
-			var profileImageMime 		  =		req.files.profile.mimeType;
-			var profileImagePath 		  =		req.files.profile.path;
-			var profileImageExt 		  =		req.files.profile.extension;
-			var profileImageSize 		  =		req.files.profile.size;
+		var profileImageOriginalName  = 	req.files.profile.originalname;
+		var profileImageName 		  =		req.files.profile.name;
+		var profileImageMime 		  =		req.files.profile.mimeType;
+		var profileImagePath 		  =		req.files.profile.path;
+		var profileImageExt 		  =		req.files.profile.extension;
+		var profileImageSize 		  =		req.files.profile.size;
 
-		} else {
-			//Set a Default Image
-			var profileImageName 		  = 	'noImage.png';
-		}
 	} else {
 		//Set a Default Image
 		var profileImageName 		  = 	'noImage.png';
 	}
 
 	//form Validation using Express-Validator
-	req.checkBody('name','Name Field is Required').notEmpty();
-	req.checkBody('email','Email Field is Required').notEmpty();
+	req.checkBody( 'name','Name Field is Required').notEmpty();
+	req.checkBody( 'email','Email Field is Required').notEmpty();
 	req.checkBody('email','Email not Valid').isEmail();
 	req.checkBody('username','Username Field is Required').notEmpty();
 	req.checkBody('password','Password Field is Required').notEmpty();
@@ -72,6 +71,7 @@ router.post('/register',function(req,res,next) {
 		});
 	} else {
 		//CReating a MOdal for New User
+		console.log('#', name, email, username, password, profileImageName);
 		var newUser	= new User({
 			name 		: 	name,
 			email 		: 	email,
@@ -81,7 +81,8 @@ router.post('/register',function(req,res,next) {
 		});
 
 		//Create User
-		User.createUser(newUser,function(err,user) {
+		console.log( newUser );
+		newUser.save(newUser,function(err,user) {
 			if(err)  throw err;
 			console.log(user);
 		});

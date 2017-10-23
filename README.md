@@ -50,6 +50,8 @@ To find all the Records of the Collection: ```db.users.find();``` or ```db.users
 
 To update the Record: ``` db.users.update({name: "NishiGaba"},{ $set: {email: "gabanishi45@gmail.com"}}); ```
 
+To delete the Record: ``` db.users.remove({}); ```
+
 If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs.mongodb.com/?_ga=2.25510269.1120633829.1507739544-13259898.1499097785)
 
 ### Node Modules to Install Before going to Section 2
@@ -92,6 +94,8 @@ validating the registration form data using express-validator. Modules used in t
 * ``` flash ``` : The simplest flash implementation for Express for showing messages.
 
 If you want detailed knowledge about these modules, just go through this link: [npmJS](https://www.npmjs.com)
+
+We are Building Mongoose Models for defining Schemma for creating new users.
 
 
 ## Section 5 (Password Encryption with Bcrypt) 
