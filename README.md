@@ -84,6 +84,15 @@ We are going to add some new Jade Templates for **Register** and **Login** Pages
 
 ## Section 4 (User Registration)
 
+* multer - file uploading
+* flash = message
+* expressValidator
+
+Coming Soon...
+
+
+## Section 5 (Password Encryption with Bcrypt) 
+
 Coming Soon...
 
 ## Refrences

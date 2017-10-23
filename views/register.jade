@@ -2,6 +2,10 @@ extends layout
 
 block content
 	.container
+		ul.errors
+			if errors
+				each error, i in errors
+					li.alert.alert-danger #{error.msg}
 		form(method='post', action='/users/register', enctype='multipart/form-data')
 			h1	Register
 			p 	Please Register using the form below
@@ -19,7 +23,7 @@ block content
 			input#password.form-control(type='password', placeholder='Enter Password' name='password')
 			div.form-group
 			label(for='confirmPassword') Confirm Password:
-			input#confirmPassword.form-control(type='password', placeholder='Confirm Password' name='password2')
+			input#confirmPassword.form-control(type='password', placeholder='Confirm Password' name='confirmPassword')
 			div.form-group
 			label(for='profile') Profile Image:
 			input#profile.form-control(type='file', name='profile')
