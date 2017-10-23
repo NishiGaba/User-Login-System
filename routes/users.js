@@ -21,11 +21,11 @@ router.get('/login', function(req, res, next) {
 router.post('/register',function(req,res,next) {
 
 	//Get Form Values
-	var name 		=	 req.body.name;
-	var email 		=	 req.body.email;
-	var username 	=	 req.body.username;
-	var password 	=	 req.body.password;
-	var confirmPass	=	 req.body.confirmPassword;
+	var name 			=	 req.body.name;
+	var email 			=	 req.body.email;
+	var username 		=	 req.body.username;
+	var password 		=	 req.body.password;
+	var confirmPassword	=	 req.body.confirmPassword;
 
 
 	//Check for IMage Field
@@ -56,19 +56,19 @@ router.post('/register',function(req,res,next) {
 	req.checkBody('email','Email not Valid').isEmail();
 	req.checkBody('username','Username Field is Required').notEmpty();
 	req.checkBody('password','Password Field is Required').notEmpty();
-	req.checkBody('confirmPass','Passwords do not Match').equals(req.body.password);
+	req.checkBody('confirmPassword','Passwords do not Match').equals(req.body.password);
 
 	//Check for Errors
 	var errors = req.validationErrors();
 
 	if(errors) {
 		res.render('register',{
-			errors 		: 	errors,
-			name 		: 	name,
-			email 		: 	email,
-			username 	: 	username,
-			password 	: 	password,
-			confirmPass : 	confirmPass
+			errors 			: 	errors,
+			name 			: 	name,
+			email 			: 	email,
+			username 		: 	username,
+			password 		: 	password,
+			confirmPassword : 	confirmPassword
 		});
 	} else {
 		//CReating a MOdal for New User
