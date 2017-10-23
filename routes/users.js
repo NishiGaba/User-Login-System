@@ -22,7 +22,7 @@ router.get('/login', function(req, res, next) {
 
 router.post('/register',function(req,res,next) {
 
-	console.log('###', req.body);
+	console.log('###', req.files);
 
 	//Get Form Values
 	var name 			=	 req.body.name;
@@ -33,16 +33,15 @@ router.post('/register',function(req,res,next) {
 
 
 	//Check for IMage Field
-	if(req.files && req.files.profile) {
+	if(req.files.length != 0) {
 
 		console.log('uploading');
 
-		var profileImageOriginalName  = 	req.files.profile.originalname;
-		var profileImageName 		  =		req.files.profile.name;
-		var profileImageMime 		  =		req.files.profile.mimeType;
-		var profileImagePath 		  =		req.files.profile.path;
-		var profileImageExt 		  =		req.files.profile.extension;
-		var profileImageSize 		  =		req.files.profile.size;
+		var profileImageOriginalName  = 	req.files[0].originalname;
+		var profileImageName 		  =		req.files[0].originalname
+		var profileImageMime 		  =		req.files[0].mimeType;
+		var profileImagePath 		  =		req.files[0].path;
+		var profileImageSize 		  =		req.files[0].size;
 
 	} else {
 		//Set a Default Image
