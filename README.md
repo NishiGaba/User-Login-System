@@ -95,12 +95,19 @@ validating the registration form data using express-validator. Modules used in t
 
 If you want detailed knowledge about these modules, just go through this link: [npmJS](https://www.npmjs.com)
 
-We are Building Mongoose Models for defining Schema for creating new users in this section.
+We are Building Mongoose Models for defining Schema for registering new users in this section.
 
 
 ## Section 5 (Password Encryption with Bcrypt) 
 
+In this section, we are going to use Bcrypt for Password Encryption.
+
 Coming Soon...
+
+
+## Section 6 (User Authentication with Passport)
+
+
 
 ## Refrences
 
