@@ -36,6 +36,8 @@ You can find the path of mongoDB installed in your system through: ```$ which mo
 
 You can start the mongoDB through: ```$ mongo```
 
+In case of any error with running the mongoDB , you can first run this command: ``` $ sudo service mongod restart ``` & then again run the command: ``` $ sudo mongo ```
+
 You can see the list of databases through: ```> show dbs```
 
 Create new Database by typing: ```> use nodeauth``` (where nodeauth here is the name of Database)
@@ -102,10 +104,19 @@ We are Building Mongoose Models for defining Schema for registering new users in
 
 In this section, we are going to use Bcrypt for Password Encryption.
 
-Coming Soon...
+Install Bcrypt using this command:
+
+``` npm install bcrypt --save ```
+
+**Bcrypt** generate a salt and hash on separate function calls or auto-gen a salt and hash to generate the hash of a password that is more secure rather than storing the actual password in the database.
 
 
 ## Section 6 (User Authentication with Passport)
+
+Coming Soon...
+
+
+## Section 7 (Logout and Access Control)
 
 
 

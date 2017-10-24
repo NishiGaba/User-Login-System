@@ -1,7 +1,8 @@
 var express = require('express');
-var router = express.Router();
+var router 	= express.Router();
 
-var User = require('../models/user');
+var User 	= require('../models/user');
+var bcrypt 	= require('bcrypt');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -21,8 +22,6 @@ router.get('/login', function(req, res, next) {
 });
 
 router.post('/register',function(req,res,next) {
-
-	console.log('###', req.files);
 
 	//Get Form Values
 	var name 			=	 req.body.name;
@@ -70,7 +69,6 @@ router.post('/register',function(req,res,next) {
 		});
 	} else {
 		//CReating a MOdal for New User
-		console.log('#', name, email, username, password, profileImageName);
 		var newUser	= new User({
 			name 		: 	name,
 			email 		: 	email,
@@ -81,16 +79,27 @@ router.post('/register',function(req,res,next) {
 
 		//Create User
 		console.log( newUser );
-		newUser.save(newUser,function(err,user) {
-			if(err)  throw err;
-			console.log(user);
-		});
+		
+		var salt = 10;
 
-		//Success Message
-		req.flash('success','You are now registered and may log in');
+		bcrypt.hash(newUser.password,salt, function(err,hash) {
+			if(err) throw err;
 
-		res.location('/');
-		res.redirect('/');
+			//Set Hashed Password
+			newUser.password = hash;
+
+			//Create New User
+			newUser.save(newUser,function(err,user) {
+				if(err)  throw err;
+				console.log(user);
+			});
+
+			//Success Message
+			req.flash('success','You are now registered and may log in');
+
+			res.location('/');
+			res.redirect('/');
+			});
 	}
 
 });

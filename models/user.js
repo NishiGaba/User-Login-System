@@ -11,7 +11,11 @@ var UserSchema 	=  mongoose.Schema({
 		type 	: String,
 		index	: true
 	},
-	password 	: String,
+	password :	{
+		type 	: String, 
+		required: true, 
+		bcrypt  : true
+	},
 	email 		: String,
 	name 		: String,
 	profile 	: String
