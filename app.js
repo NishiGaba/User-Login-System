@@ -74,6 +74,13 @@ app.use(function(req,res,next) {
 	next();
 });
 
+
+app.get('*', function(req,res,next) {
+	//local variable to hold user info
+	res.locals.user = req.user ||  null;
+	next();
+});
+
 app.use('/', routes);
 app.use('/users',users);
 

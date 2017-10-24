@@ -104,11 +104,13 @@ We are Building Mongoose Models for defining Schema for registering new users in
 
 In this section, we are going to use Bcrypt for Password Encryption.
 
+**Bcrypt** generate a salt and hash on separate function calls or auto-gen a salt and hash to generate the hash of a password that is more secure rather than storing the actual password in the database.
+
 Install Bcrypt using this command:
 
 ``` npm install bcrypt --save ```
 
-**Bcrypt** generate a salt and hash on separate function calls or auto-gen a salt and hash to generate the hash of a password that is more secure rather than storing the actual password in the database.
+For detailed information, visit this link: [npmJS](https://www.npmjs.com)
 
 
 ## Section 6 (User Authentication with Passport)
@@ -126,8 +128,19 @@ For more details, you can visit [passportjs.org](http://www.passportjs.org/)
 
 In this section, we are going to:
 
-* Add Logout Functionality and restrict access for some pages for not registered users.
+* Add Logout Functionality.
 * Styling some of the **flash** messages.
+* Restrict access of some Routes for not registered users using passport **isAuthenticated()** method.
+
+
+## How to run this Project:
+
+* Clone this repository by typing following command in your Terminal: 
+	``` git clone https://github.com/NishiGaba/Basic-Express-Website.git ``` 
+* Then run ``` npm install ``` in the Cloned Project Directory
+* In last, run ``` nodemon ./bin/www ``` command in your Terminal
+
+**Yeahh** :smile: Great work so far. Keep it up. 
 
 
 ## Refrences
