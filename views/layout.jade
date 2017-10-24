@@ -33,8 +33,13 @@ html
           ul.nav.navbar-nav.navbar-right
             li
               a(href='/users/logout') Logout
-
+  .container
+    != messages()
     block content
     footer
-      p &copy; 2015, All Rights Reserved
+      row
+        br
+        br
+        center
+          p &copy; 2015, All Rights Reserved
 

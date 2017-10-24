@@ -124,7 +124,10 @@ For more details, you can visit [passportjs.org](http://www.passportjs.org/)
 
 ## Section 7 (Logout and Access Control)
 
-Coming Soon...
+In this section, we are going to:
+
+* Add Logout Functionality and restrict access for some pages for not registered users.
+* Styling some of the **flash** messages.
 
 
 ## Refrences
