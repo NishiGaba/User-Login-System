@@ -136,7 +136,7 @@ In this section, we are going to:
 ## How to run this Project:
 
 * Clone this repository by typing following command in your Terminal: 
-	``` git clone https://github.com/NishiGaba/Basic-Express-Website.git ``` 
+	``` git clone https://github.com/NishiGaba/User-Login-System.git ``` 
 * Then run ``` npm install ``` in the Cloned Project Directory
 * In last, run ``` nodemon ./bin/www ``` command in your Terminal
 
