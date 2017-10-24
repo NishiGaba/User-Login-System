@@ -113,11 +113,18 @@ Install Bcrypt using this command:
 
 ## Section 6 (User Authentication with Passport)
 
-Coming Soon...
+In this Section, we are going to compare the password entered by the user with the bcrypt hashed password and authenticate user and then maintain the session for current logged in user through **passport serializing**.
+
+**Passport** is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. A comprehensive set of strategies support authentication using a username and password, Facebook, Twitter, and more.
+
+Install **passport** and **passport-local** through ``` npm install <package-name> --save ```
+
+For more details, you can visit [passportjs.org](http://www.passportjs.org/)
 
 
 ## Section 7 (Logout and Access Control)
 
+Coming Soon...
 
 
 ## Refrences

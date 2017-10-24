@@ -1,8 +1,10 @@
-var express = require('express');
-var router 	= express.Router();
+var express 		=	require('express');
+var router 			= 	express.Router();
 
-var User 	= require('../models/user');
-var bcrypt 	= require('bcrypt');
+var User 			= 	require('../models/user');
+var bcrypt 			= 	require('bcrypt');
+var passport		= 	require('passport');
+var localStrategy	=	require('passport-local').Strategy;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -101,6 +103,64 @@ router.post('/register',function(req,res,next) {
 			res.redirect('/');
 			});
 	}
+
+});
+
+
+//Flow (IV) [Passport creating a Session for Current Logged in User By Serializing it.]
+passport.serializeUser(function(user, done) {
+  done(null, user[0].id);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
+
+//Flow (III)
+var comparePassword = function(candidatePassword,hash,callback) {
+
+	bcrypt.compare(candidatePassword,hash,function(err, isMatch) {
+		if(err) return callback(err);
+		callback(null,isMatch);
+	});
+
+}
+
+
+//Flow (II)
+passport.use(new localStrategy(
+	function(username, password, done) {
+		User.find({username : username}, function(err,user) {
+			
+			if(err) throw err;
+			if(user.length == 0) {
+				console.log('Unknown User');
+				return done(null,false,{message: 'Unknown User'});
+			} 
+			
+			comparePassword(password,user[0].password, function(err,isMatch) {
+				if(err) throw err;
+				if(isMatch) {
+					return done(null, user);
+					res.redirect('/');
+				} else {
+					console.log('Invalid Password');
+					return done(null, false, {message: 'Invalid Password'});
+				}
+			})
+		});
+}));
+
+//Flow (I)
+router.post('/login',passport.authenticate('local',{failureRedirect:'/users/login',failureFlash:'Invalid Username or Password'}), function(req,res) {
+
+	//If Local Strategy Comes True
+	console.log('Authentication Successful');
+	req.flash('success','You are Logged In');
+	res.redirect('/');
 
 });
 
