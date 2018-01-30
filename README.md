@@ -28,7 +28,9 @@
 MongoDB is NoSQL Database and it stores information in JSON format. It is the commonly used DB for Node JS.
 MongoDb makes development fast and it is syntactically simple. It is easy to change and maintain.
 
-You  can Install MongoDB from here: [Install_MongoDB](https://docs.mongodb.com/manual/installation/)
+You  can Install MongoDB (for Ubuntu) from here: [Install_MongoDB](https://docs.mongodb.com/manual/installation/)
+
+You can Install MongoDB (for Linux Mint - Sylvia) from here: [Install MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/)
 
 You can check, if mongoDb is already installed in your system by typing this command in your terminal: 
 
